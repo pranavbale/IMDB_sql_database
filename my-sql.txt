@@ -1,0 +1,41 @@
+CREATE TABLE Movie (
+    movie_id INTEGER PRIMARY KEY,
+    movie_name TEXT,
+);
+
+CREATE TABLE User {
+    user_id INTEGER PRIMARY KEY,
+    user TEXT,
+};
+
+CREATE TABLE Review {
+    movie_id INTEGER,
+    user_id INTEGER PRIMARY KEY,
+    review INTEGER,
+};
+
+CREATE TABLE Genre {
+    genre_id INTEGER PRIMARY KEY,
+    genre TEXT,
+};
+
+CREATE TABLE Genre_Movie {
+    movie_id INTEGER PRIMARY KEY,
+    genre_id INTEGER,
+};
+
+CREATE TABLE Artist {
+    artist_id INTEGER PRIMARY KEY,
+    artist_name TEXT,
+};
+
+CREATE TABLE Role {
+    role_id INTEGER PRIMARY KEY,
+    role TEXT,
+};
+
+CREATE TABLE Movie_Role_Artist {
+    artist_id INTEGER,
+    movie_id INTEGER,
+    role_id INTEGER,
+};
